@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hogwarts World</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="main">
+        <div class="main__introduce">
+          <h1 class="heading">
+            Ласкаво просимо<br />
+            у світ Гаррі Поттера
+          </h1>
+          <a href="#allCharacters" class="link">
+            <button class="button main-button all-btn-open">
+              Показати всіх персонажів
+            </button>
+          </a>
+        </div>
+      </div>
+      <div id="allCharacters" class="allCharacters is-hidden">
+        <div class="allCharacters__wrap">
+          <div class="allCharacters__card">
+            <img
+              class="allCharacters__img"
+              src="/images/students.jpg"
+              alt="Hogward's students"
+            />
+            <a href="#studentsSection" class="link">
+              <button
+                type="button"
+                onclick="showOne('studentsSection')"
+                class="button allCharacters__button students_btn"
+              >
+                Студенти Гоґвортсу
+              </button>
+            </a>
+          </div>
+          <div class="allCharacters__card">
+            <img
+              class="allCharacters__img"
+              src="/images/workers.jpg"
+              alt="Hogward's workers"
+            />
+            <a href="#staffSection" class="link">
+              <button
+                type="button"
+                onclick="showOne('staffSection')"
+                class="button allCharacters__button staff_btn"
+              >
+                Співробітники Гоґвортсу
+              </button>
+            </a>
+          </div>
+          <div class="allCharacters__card">
+            <img
+              class="allCharacters__img"
+              src="/images/house_students.jpg"
+              alt="Hogward's house students"
+            />
+            <a href="#housesSection" class="link">
+              <button
+                type="button"
+                onclick="showOne('housesSection')"
+                class="button allCharacters__button house_btn"
+              >
+                Персонажі в певному будинку
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <section id="studentsSection" class="studentsSection is-hidden">
+        <h2 class="heading">Студенти Гоґвортсу</h2>
+        <div id="students" class="students"></div>
+      </section>
+      <section id="staffSection" class="staffSection is-hidden">
+        <h2 class="heading">
+          Співробітники <br />
+          Гоґвортсу
+        </h2>
+        <div id="staff" class="stuff"></div>
+      </section>
+      <section id="housesSection" class="housesSection is-hidden">
+        <h2 class="heading">
+          Персонажі в <br />
+          певному будинку
+        </h2>
+        <div class="container">
+          <div class="navigation">
+            <ul id="houses" class="houses">
+              <li
+                id="gryffindor"
+                onclick="showOneHouse('gryffindorHouse')"
+                class="list active"
+              >
+                <div class="li_inner">
+                  <img
+                    src="./images/gryffindor.png"
+                    alt="gryffindor logo"
+                  />Gryffindor
+                </div>
+              </li>
+              <li
+                id="slytherin"
+                onclick="showOneHouse('slytherinHouse')"
+                class="list"
+              >
+                <div class="li_inner">
+                  <img
+                    src="./images/slytherin.png"
+                    alt="slytherin logo"
+                  />Slytherin
+                </div>
+              </li>
+              <li
+                id="ravenclaw"
+                onclick="showOneHouse('ravenclawHouse')"
+                class="list"
+              >
+                <div class="li_inner">
+                  <img
+                    src="./images/ravenclaw.png"
+                    alt="ravenclaw logo"
+                  />Ravenclaw
+                </div>
+              </li>
+              <li
+                id="hufflepuff"
+                onclick="showOneHouse('hufflepuffHouse')"
+                class="list"
+              >
+                <div class="li_inner">
+                  <img
+                    src="./images/hufflepuff.png"
+                    alt="hufflepuff logo"
+                  />Hufflepuff
+                </div>
+              </li>
+              <div class="indicator"></div>
+            </ul>
+          </div>
+          <div id="gryffindorHouse" class="not-showed">
+            <div class="gryffindor"></div>
+          </div>
+          <div id="slytherinHouse" class="not-showed">
+            <div class="slytherin"></div>
+          </div>
+          <div id="ravenclawHouse" class="not-showed">
+            <div class="ravenclaw"></div>
+          </div>
+          <div id="hufflepuffHouse" class="not-showed">
+            <div class="hufflepuff"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="/js/allCharacters.js"></script>
+    <script src="/js/students.js"></script>
+    <script src="./js/menuIndicator.js"></script>
+  </body>
+</html>
