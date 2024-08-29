@@ -58,7 +58,7 @@ img {
 }
 
 .main {
-  background-image: url(/images/main-photo.jpg);
+  background-image: url('/images/main-photo.jpg');
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
